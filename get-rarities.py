@@ -29,7 +29,7 @@ if __name__ == "__main__":
             rarities["Colour"][row[7]] = 1 if (row[7] in rarities["Colour"]) == False else rarities["Colour"][row[7]] + 1
             rarities["Hat"][row[8]] = 1 if (row[8] in rarities["Hat"]) == False else rarities["Hat"][row[8]] + 1
         
-        with open('data.json', 'w', encoding='utf-8') as f:
+        with open('rarities.json', 'w', encoding='utf-8') as f:
             json.dump(rarities, f, ensure_ascii=False, indent=4)
 
         with open('rarities.csv', 'w', newline='') as csvWriter:
